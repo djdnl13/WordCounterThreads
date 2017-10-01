@@ -42,7 +42,7 @@ int main()
 	int ThreadNumber = 4;
 	vector<thread> vectorThread(ThreadNumber);
 	vector<map<string, long> > vectorMap(ThreadNumber);
-	string filename = "big.txt";
+	string filename = "quijote.txt";
 
 	FILE * myfile;
 	myfile = fopen(filename.c_str(), "r");	
@@ -69,7 +69,10 @@ int main()
 		}		
 	}
 
-	cout << vectorMap[0].size() << endl;
+	for(auto &it : vectorMap[0])
+		cout << it.first << " : " << it.second << endl;	
+	
+	cout << "Total words = " << vectorMap[0].size() << endl;
 
 	return 0;
 }
