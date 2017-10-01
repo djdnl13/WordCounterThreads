@@ -39,7 +39,7 @@ void countPart(int i, long offset, string filename, map<string, long> * partial_
 
 int main()
 {
-	int ThreadNumber = 4;
+	int ThreadNumber = 2;
 	vector<thread> vectorThread(ThreadNumber);
 	vector<map<string, long> > vectorMap(ThreadNumber);
 	string filename = "quijote.txt";
@@ -76,3 +76,4 @@ int main()
 
 	return 0;
 }
+
